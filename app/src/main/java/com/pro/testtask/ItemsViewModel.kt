@@ -25,7 +25,7 @@ class ItemsViewModel @Inject constructor(
         private set
 
     fun nextCurrentItemPosition() {
-        currentItemPosition = (currentItemPosition + 1) % 3
+        currentItemPosition = (currentItemPosition + 1) % _itemIndexes.value.size
     }
     // Index loading error text
     private val _loadIndexesError = mutableStateOf("")
